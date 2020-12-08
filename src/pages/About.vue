@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, onUpdated } from "vue";
+import { computed, defineComponent, inject, onMounted, onUpdated } from "vue";
 import { useStore } from "vuex";
 
 
@@ -13,6 +13,8 @@ export default defineComponent({
   name: 'Home',
   props: {},
   setup() {
+    const http = inject('http');
+    console.log(http);
     const store = useStore();
     const title = computed(() => store.state.title);
     const setTitle = (title: string): void => {

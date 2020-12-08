@@ -3,5 +3,8 @@ import App from './App.vue'
 import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import 'element-plus/lib/theme-chalk/index.css';
+import ElementPlus from 'element-plus';
+import { httpPlugin } from './utils/http'
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(store).use(router).use(ElementPlus).use(httpPlugin).mount('#app')
