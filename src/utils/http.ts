@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Plugin, App } from '@vue/runtime-core';
 const instance = axios.create({
   baseURL: 'http://localhost:3009/lighthouse/',
-  timeout: 1000,
+  // timeout: 1000,
 });
 
 axios.interceptors.request.use((config) =>{
