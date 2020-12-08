@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <div>{{title}}</div>
+  <button @click="setTitle('nnnnn')">setTitle</button>
+  <button @click="nextTickSetTitle('nextTickSetTitle')">nextTickSetTitle</button>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import { computed, defineComponent, onMounted, onUpdated } from "vue";
+import { useStore } from "vuex";
 
-@Options({
-  components: {
-    HelloWorld,
-  },
+
+export default defineComponent({
+  name: 'Home',
+  props: {},
+  setup() {
+    const store = useStore();
+    const title = computed(() => store.state.title);
+    const setTitle = (title: string): void => {
+      store.commit('setTitle', title);
+    };
+    const nextTickSetTitle = async (title: string): Promise<void> => {
+      await store.dispatch('nextTickSetTitle', title);
+    };
+    
+    onMounted(() => {
+      console.log('mounted')
+    });
+    onUpdated(() => {
+      console.log('update');
+    });
+    return {
+      title,
+      setTitle,
+      nextTickSetTitle
+    }
+  }
 })
-export default class Home extends Vue {}
 </script>
