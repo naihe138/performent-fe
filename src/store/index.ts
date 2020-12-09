@@ -8,6 +8,7 @@ interface State {
 interface WebSit {
   url: string;
   phone: string;
+  code: string;
 }
 export default createStore({
   state(): State {
@@ -15,7 +16,8 @@ export default createStore({
       title: '',
       webSit: {
         url: 'https://static-dsu.wesure.cn/sitapp/app0/long-term-course/home?courseId=shebao001&channelCode=rukou',
-        phone: '13640915594'
+        phone: '13640915594',
+        code: ''
       }
     }
   },

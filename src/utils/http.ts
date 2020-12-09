@@ -5,14 +5,18 @@ const instance = axios.create({
   // timeout: 1000,
 });
 
-axios.interceptors.request.use((config) =>{
+instance.interceptors.request.use((config) =>{
   return config;
 }, function (error) {
   return Promise.reject(error);
 });
 
-axios.interceptors.response.use((response) => {
-  return response;
+instance.interceptors.response.use((response) => {
+  if (response.data.code) {
+    return response.data.result;
+  } else {
+    return Promise.reject(response);
+  }
 }, function (error) {
   return Promise.reject(error);
 });
