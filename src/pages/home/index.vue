@@ -40,8 +40,8 @@ export default defineComponent({
         const msgData: MessageBoxData = await $prompt('请输入4位数验证码', '提示', { 
           confirmButtonText: '确定',
           cancelButtonText: '取消',
-          inputPattern: /\d{4}/,
-          inputErrorMessage: '验证码必须是4位数哦！'
+          inputPattern: /\d{6}/,
+          inputErrorMessage: '验证码必须是6位数哦！'
         });
         // 登陆，检测
         const res: any = await http('getScore', {
