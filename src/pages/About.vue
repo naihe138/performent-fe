@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, inject, onMounted, onUpdated, reactive } from "vue";
+import { computed, defineComponent, inject, onMounted, onUpdated } from "vue";
 import { useStore } from "vuex";
 
 
