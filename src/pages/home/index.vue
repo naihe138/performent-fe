@@ -3,7 +3,7 @@
     <div class="content">
       <div class="searchbox">
         <div class="search">
-          <h3 class="search-title">eye your performent page</h3>
+          <h3 class="search-title">Eye Your Page Performent</h3>
           <div class="search-content">
             <input class="search-input" type="text" placeholder="请输入检测的网址" />
             <div class="search-btn">开始检测</div>
@@ -13,27 +13,31 @@
     </div>
     <div class="info">
       <div class="card">
-        <div class="icon"><i class="el-icon-edit"></i></div>
+        <div class="icon"><i class="iconfont iconjiance"></i></div>
         <div class="detail">
-          <p>11111</p>
-          <p>11111</p>
-          <p>11111</p>
+          <h3>性能检测</h3>
+          <p>输入要检测的网址，点击Eye按钮，实时生成页面性能报告</p>
         </div>
       </div>
       <div class="card">
-        <div class="icon"><i class="el-icon-edit"></i></div>
+        <div class="icon"><i class="iconfont iconjiance"></i></div>
         <div class="detail">
-          <p>11111</p>
-          <p>11111</p>
-          <p>11111</p>
+          <h3>性能检测</h3>
+          <p>输入要检测的网址，点击Eye按钮，实时生成页面性能报告</p>
         </div>
       </div>
       <div class="card">
-        <div class="icon"><i class="el-icon-edit"></i></div>
+        <div class="icon"><i class="iconfont iconjiance"></i></div>
         <div class="detail">
-          <p>11111</p>
-          <p>11111</p>
-          <p>11111</p>
+          <h3>性能检测</h3>
+          <p>输入要检测的网址，点击Eye按钮，实时生成页面性能报告</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon"><i class="iconfont iconjiance"></i></div>
+        <div class="detail">
+          <h3>性能检测</h3>
+          <p>输入要检测的网址，点击Eye按钮，实时生成页面性能报告</p>
         </div>
       </div>
     </div>
@@ -119,14 +123,13 @@ export default defineComponent({
 <style lang="scss" scoped>
 .content {
   padding-top: 80px;
-  background: #cccccc;
+  background-image: radial-gradient(#58f6e4, #0295d7);
 }
 .searchbox {
   width: $mainWidth;
   @include boxCenter;
   height: 600px;
   overflow: hidden;
-  
 }
 .search {
   width: 600px;
@@ -134,12 +137,12 @@ export default defineComponent({
   margin: 200px auto 0 auto;
   .search-title {
     font-weight: normal;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
+    color: #ffffff;
   }
   .search-content {
     margin-top: 20px;
-    border: 1px solid gold;
     display: flex;
     height: 40px;
   }
@@ -148,40 +151,61 @@ export default defineComponent({
     outline: none;
     flex: 1;
     padding: 0 12px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
   .search-btn {
     width: 100px;
-    background: blueviolet;
+    background: #FEB300;
     color: #ffffff;
     text-align: center;
     line-height: 40px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 }
 .info {
   width: $mainWidth;
   @include boxCenter;
-  margin-top: 30px;
+  padding: 100px 0;
   display: flex;
   justify-content: space-between;
   .card {
-    width: 300px;
-    height: 300px;
-    border: 1px solid gray;
+    width: 220px;
+    height: 200px;
     text-align: center;
     overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 4px;
   }
   .icon {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     font-size: 60px;
+    .iconfont{
+      font-size: 50px;
+      color: #666666;
+    }
   }
-  .detail p {
-    font-size: 14px;
-    line-height: 30px;
+  .detail{
+    width: 90%;
+    margin: 0 auto;
+    h3 {
+      font-size: 18px;
+      color: #333333;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 18px;
+      color: #666666;
+    }
   }
 }
 .footer {
   width: 100%;
-  height: 100px;
+  height: 120px;
+  background: #0295d7;
 }
 </style>
