@@ -20,29 +20,29 @@
         </div>
       </div>
       <div class="card">
-        <div class="icon"><i class="iconfont iconjiance"></i></div>
+        <div class="icon"><i class="iconfont iconiconfontzhinanzhen"></i></div>
         <div class="detail">
-          <h3>性能检测</h3>
-          <p>输入要检测的网址，点击Eye按钮，实时生成页面性能报告</p>
+          <h3>优化指引</h3>
+          <p>基于性能优化和检测结果，给出优化指导意见</p>
         </div>
       </div>
       <div class="card">
-        <div class="icon"><i class="iconfont iconjiance"></i></div>
+        <div class="icon"><i class="iconfont iconzoushi"></i></div>
         <div class="detail">
-          <h3>性能检测</h3>
-          <p>输入要检测的网址，点击Eye按钮，实时生成页面性能报告</p>
+          <h3>性能走势</h3>
+          <p>扫描头部重点移页面，按页面维度展示一段时间性你那个走势</p>
         </div>
       </div>
       <div class="card">
-        <div class="icon"><i class="iconfont iconjiance"></i></div>
+        <div class="icon"><i class="iconfont icondingzhi" style="font-size: 40px"></i></div>
         <div class="detail">
-          <h3>性能检测</h3>
-          <p>输入要检测的网址，点击Eye按钮，实时生成页面性能报告</p>
+          <h3>定制能力</h3>
+          <p>支持待检测页面自定义账号登录，支持提供检测接口服务</p>
         </div>
       </div>
     </div>
     <div class="footer">
-      脚步
+      Copyright © 2020-至今 by <a target="_blank" href="https://blog.naice.me"> naice</a>
     </div>
     <!-- <el-form ref="form" :model="webSit" label-width="120px">
       <el-form-item label="测试地址">
@@ -128,13 +128,13 @@ export default defineComponent({
 .searchbox {
   width: $mainWidth;
   @include boxCenter;
-  height: 600px;
+  height: 500px;
   overflow: hidden;
 }
 .search {
   width: 600px;
   height: 100px;
-  margin: 200px auto 0 auto;
+  margin: 160px auto 0 auto;
   .search-title {
     font-weight: normal;
     font-size: 40px;
@@ -162,6 +162,7 @@ export default defineComponent({
     line-height: 40px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    cursor: pointer;
   }
 }
 .info {
@@ -180,7 +181,7 @@ export default defineComponent({
     border-radius: 4px;
   }
   .icon {
-    margin-top: 10px;
+    margin-top: 16px;
     margin-bottom: 20px;
     font-size: 60px;
     .iconfont{
@@ -198,7 +199,7 @@ export default defineComponent({
     p {
       margin-top: 10px;
       font-size: 14px;
-      line-height: 18px;
+      line-height: 22px;
       color: #666666;
     }
   }
@@ -206,6 +207,12 @@ export default defineComponent({
 .footer {
   width: 100%;
   height: 120px;
-  background: #0295d7;
+  background: #045c9d;
+  text-align: center;
+  line-height: 120px;
+  color: #ffffff;
+  a{
+    color: #ffffff;
+  }
 }
 </style>
